@@ -248,7 +248,7 @@ class _Footer extends StatelessWidget {
         ),
         const SizedBox(height: 20),
         Text(
-          '© 2026 ${profile.name}',
+          '© 2026',
           textAlign: TextAlign.center,
           style: AppType.body(size: 13),
         ),

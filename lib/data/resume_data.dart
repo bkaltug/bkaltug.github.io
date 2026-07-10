@@ -62,7 +62,7 @@ const List<EducationEntry> education = [
 const List<SkillGroup> skillGroups = [
   SkillGroup(
     label: 'Embedded & Hardware',
-    skills: ['C / C++', 'Arduino', "Raspberry Pi", 'STM32', 'PCB Design'],
+    skills: ['C / C++', 'LTSpice',  'Arduino', "Raspberry Pi", 'STM32', 'PCB Design'],
   ),
 
   SkillGroup(
