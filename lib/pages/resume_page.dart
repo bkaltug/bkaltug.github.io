@@ -120,7 +120,7 @@ class _Header extends StatelessWidget {
             Text('Education & Resume', style: AppType.display(size: 36)),
           ],
         ),
-        SizedBox(width: 200),
+        SizedBox(width: 250),
         FilledButton.icon(
           onPressed: () => openExternalUri(Uri.base.resolve('cv.pdf')),
           icon: const Icon(Icons.download, size: 18),
