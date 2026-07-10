@@ -120,9 +120,8 @@ class _Header extends StatelessWidget {
             Text('Education & Resume', style: AppType.display(size: 36)),
           ],
         ),
+        SizedBox(width: 200),
         FilledButton.icon(
-          // The real file belongs at web/cv.pdf so it deploys to the site
-          // root; the button works as soon as it exists.
           onPressed: () => openExternalUri(Uri.base.resolve('cv.pdf')),
           icon: const Icon(Icons.download, size: 18),
           label: const Text('Download CV (PDF)'),

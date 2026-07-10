@@ -34,58 +34,48 @@ const List<Project> projects = [
   Project(
     title: 'HobbyHub',
     description:
-        'Cross-platform app for tracking movies, TV series, books, and games '
+        'Cross-platform app for tracking hobbies'
         'in one unified library.',
     tech: ['Flutter', 'Dart', 'Supabase', 'PostgreSQL', 'REST APIs'],
     githubUrl: 'https://github.com/bkaltug/HobbyHub',
     status: 'In development',
     type: ProjectType.software,
   ),
-  // TODO(berkay): replace this placeholder with a real software project.
   Project(
-    title: 'Software Project — TODO',
+    title: 'Foody',
     description:
-        'TODO(berkay): one or two sentences on what this project does and why '
-        'it is interesting.',
-    tech: ['TODO'],
+        'An app that gives you a recipe based on the picture of ingredients.',
+    tech: ['Flutter', 'Dart', 'Python', 'Computer vision'],
     type: ProjectType.software,
   ),
-  // TODO(berkay): replace this placeholder with a real software project.
   Project(
-    title: 'Software Project — TODO',
+    title: 'TS Vision',
     description:
-        'TODO(berkay): one or two sentences on what this project does and why '
-        'it is interesting.',
-    tech: ['TODO'],
+        'An app that detects traffic signs in real-time with computer vision',
+    tech: ['Flutter', 'Dart', 'Python', 'Computer Vision'],
     type: ProjectType.software,
   ),
 
   // ---- Hardware -----------------------------------------------------------
-  // TODO(berkay): replace this placeholder with your FPGA project.
   Project(
-    title: 'FPGA Project — TODO',
+    title: '2 - bit PWM Encoder & Decoder',
     description:
-        'TODO(berkay): one or two sentences on the FPGA work — platform, '
-        'toolchain, what it achieved.',
-    tech: ['TODO'],
+        'A circuit that is able to communicate in 2 bits using PWM signals. ',
+    tech: ['LTSPice', 'Circuit Design'],
     type: ProjectType.hardware,
   ),
-  // TODO(berkay): replace this placeholder with your embedded systems project.
   Project(
-    title: 'Embedded Systems Project — TODO',
+    title: 'Automatic Pet Feeder',
     description:
-        'TODO(berkay): one or two sentences on the embedded work — MCU, '
-        'peripherals, what it achieved.',
-    tech: ['TODO'],
+        'A system that utilizes sensors and a robotic arm to act as an automatic pet feeder.',
+    tech: ['Arduino Mega 2560', 'Servo Motors', 'Ultrasonic Sensor', 'Weight Sensor', 'Robotic Arm'],
     type: ProjectType.hardware,
   ),
-  // TODO(berkay): replace this placeholder with your senior design project.
   Project(
-    title: 'Senior Design Project — TODO',
+    title: 'CanSat - Can Sized Satellite',
     description:
-        'TODO(berkay): one or two sentences on the senior design project and '
-        'its outcome.',
-    tech: ['TODO'],
+        'The model satellite prepared for the TEKNOFEST Model Uydu (CanSat) competition. ',
+    tech: ['Raspberry Pi 2w Zero', 'Arduino', 'Sensors', 'C++', 'Python'],
     type: ProjectType.hardware,
   ),
 ];
