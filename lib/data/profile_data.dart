@@ -26,7 +26,7 @@ class Profile {
 const Profile profile = Profile(
   name: 'Berkay Altuğ Ustagül',
   headline: 'Electronics & Communications Engineer',
-  tagline: 'Embedded Systems • FPGA • Satellite Communications • AI • Flutter',
+  tagline: 'AI • Satellite Communications • Embedded Systems • FPGA • Mobile Applications',
   location: 'İzmir, Türkiye',
   githubUrl: 'https://github.com/bkaltug',
   linkedinUrl: 'https://www.linkedin.com/in/bkaltug',

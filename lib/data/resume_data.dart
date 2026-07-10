@@ -56,7 +56,6 @@ const List<EducationEntry> education = [
     school: 'Izmir Institute of Technology (IZTECH)',
     location: 'Izmir, Türkiye',
     gpa: null,
-    projectLine: 'Senior project: TBD',
   ),
 ];
 
