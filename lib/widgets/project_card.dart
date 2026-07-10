@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 
 import '../data/projects_data.dart';
 import '../theme/palette.dart';
@@ -8,6 +9,8 @@ import '../util/links.dart';
 import 'glass.dart';
 import 'hover_card.dart';
 
+/// Grid card for a project. The whole card navigates to the project's own
+/// detail page; the GitHub/Live buttons inside still open externally.
 class ProjectCard extends StatelessWidget {
   const ProjectCard({super.key, required this.project});
 
@@ -22,6 +25,7 @@ class ProjectCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final reduceMotion = MediaQuery.of(context).disableAnimations;
     final imageAsset = project.imageAsset;
     final githubUrl = project.githubUrl;
     final liveUrl = project.liveUrl;
@@ -29,6 +33,8 @@ class ProjectCard extends StatelessWidget {
 
     return HoverCard(
       accent: _accent,
+      onTap: () => context.go(projectRoute(project)),
+      semanticLabel: '${project.title} — view project details',
       builder: (context, hovered) => Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -117,6 +123,18 @@ class ProjectCard extends StatelessWidget {
                     ],
                   ),
                 ],
+                const SizedBox(height: 16),
+                AnimatedPadding(
+                  duration: reduceMotion
+                      ? Duration.zero
+                      : const Duration(milliseconds: 220),
+                  curve: Curves.easeOutCubic,
+                  padding: EdgeInsets.only(left: hovered ? 8 : 0),
+                  child: Text(
+                    'View project →',
+                    style: AppType.chip(size: 13, color: _accent),
+                  ),
+                ),
               ],
             ),
           ),

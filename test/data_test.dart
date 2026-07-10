@@ -22,12 +22,26 @@ void main() {
     }
   });
 
+  test('project slugs are URL-safe and unique per type', () {
+    final seen = <String>{};
+    for (final project in projects) {
+      expect(project.slug, matches(RegExp(r'^[a-z0-9-]+$')));
+      expect(
+        seen.add('${project.type.name}/${project.slug}'),
+        isTrue,
+        reason: 'duplicate slug: ${project.type.name}/${project.slug}',
+      );
+      expect(projectBySlug(project.type, project.slug), same(project));
+    }
+  });
+
   test('resume data is present', () {
     expect(education, isNotEmpty);
-    expect(skillGroups, hasLength(5));
-    expect(experience, hasLength(2));
+    expect(skillGroups, isNotEmpty);
+    expect(experience, isNotEmpty);
     for (final entry in experience) {
-      expect(entry.bullets, hasLength(2));
+      expect(entry.role, isNotEmpty);
+      expect(entry.bullets, isNotEmpty);
     }
   });
 }

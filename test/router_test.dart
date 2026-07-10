@@ -1,4 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:portfolio/data/projects_data.dart';
 import 'package:portfolio/router.dart';
 
 void main() {
@@ -6,6 +7,15 @@ void main() {
 
   test('all four routes resolve', () {
     for (final path in ['/', '/resume', '/software', '/hardware']) {
+      final match = router.configuration.findMatch(Uri.parse(path));
+      expect(match.isError, isFalse, reason: path);
+      expect(match.matches, isNotEmpty, reason: path);
+    }
+  });
+
+  test('every project detail route resolves', () {
+    for (final project in projects) {
+      final path = projectRoute(project);
       final match = router.configuration.findMatch(Uri.parse(path));
       expect(match.isError, isFalse, reason: path);
       expect(match.matches, isNotEmpty, reason: path);

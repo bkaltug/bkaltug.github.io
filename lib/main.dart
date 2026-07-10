@@ -17,7 +17,8 @@ class PortfolioApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Berkay Altuğ Ustagül — Electronics & Communications Engineer',
+      // On web this sets the browser tab title.
+      title: 'Berkay Altuğ Ustagül',
       debugShowCheckedModeBanner: false,
       theme: buildAppTheme(),
       routerConfig: router,

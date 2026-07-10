@@ -5,10 +5,13 @@ import '../data/profile_data.dart';
 import '../theme/palette.dart';
 import '../theme/typography.dart';
 
-/// Slim top bar for subpages: back arrow (goes home) + wordmark.
+/// Slim top bar for subpages: back arrow + wordmark.
 /// The landing page has no top bar.
 class PageTopBar extends StatelessWidget {
-  const PageTopBar({super.key});
+  const PageTopBar({super.key, this.backTo = '/'});
+
+  /// Where the back arrow navigates; defaults to the landing page.
+  final String backTo;
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +25,8 @@ class PageTopBar extends StatelessWidget {
             child: Row(
               children: [
                 IconButton(
-                  onPressed: () => context.go('/'),
-                  tooltip: 'Back to home',
+                  onPressed: () => context.go(backTo),
+                  tooltip: backTo == '/' ? 'Back to home' : 'Back',
                   icon: const Icon(
                     Icons.arrow_back,
                     color: Palette.textPrimary,

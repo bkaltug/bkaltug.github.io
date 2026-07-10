@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'data/projects_data.dart';
 import 'pages/landing_page.dart';
 import 'pages/not_found_page.dart';
+import 'pages/project_detail_page.dart';
 import 'pages/projects_page.dart';
 import 'pages/resume_page.dart';
 import 'widgets/app_shell.dart';
@@ -40,11 +41,35 @@ final GoRouter router = GoRouter(
           path: '/software',
           pageBuilder: (context, state) =>
               _fadePage(state, const ProjectsPage(type: ProjectType.software)),
+          routes: [
+            GoRoute(
+              path: ':slug',
+              pageBuilder: (context, state) => _fadePage(
+                state,
+                ProjectDetailPage(
+                  type: ProjectType.software,
+                  slug: state.pathParameters['slug']!,
+                ),
+              ),
+            ),
+          ],
         ),
         GoRoute(
           path: '/hardware',
           pageBuilder: (context, state) =>
               _fadePage(state, const ProjectsPage(type: ProjectType.hardware)),
+          routes: [
+            GoRoute(
+              path: ':slug',
+              pageBuilder: (context, state) => _fadePage(
+                state,
+                ProjectDetailPage(
+                  type: ProjectType.hardware,
+                  slug: state.pathParameters['slug']!,
+                ),
+              ),
+            ),
+          ],
         ),
         // Catch-all inside the shell so the 404 page keeps the aurora backdrop.
         GoRoute(
