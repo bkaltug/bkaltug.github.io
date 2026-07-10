@@ -86,7 +86,6 @@ const List<SkillGroup> skillGroups = [
 ];
 
 const List<ExperienceEntry> experience = [
-  // TODO(berkay): replace this placeholder with a real experience entry.
   ExperienceEntry(
     role: 'Mobile App Developer Intern',
     organization: 'RoofStacks',
@@ -97,24 +96,32 @@ const List<ExperienceEntry> experience = [
       'Got into Android Development, Kotlin Coroutines, Android Jetpack Compose and had the time to apply and practice all of these technologies'
     ],
   ),
-  // TODO(berkay): replace this placeholder with a real experience entry.
+
   ExperienceEntry(
-    role: 'Role title — TODO',
-    organization: 'Organization — TODO',
-    period: 'Dates — TODO',
+    role: 'Electrical & Electronics Intern ',
+    organization: 'BorgWarner Inc. (Phinia)',
+    period: 'Sep 2022 - Oct 2022',
     bullets: [
-      'TODO(berkay): what you did and the impact it had.',
-      'TODO(berkay): a second highlight worth a recruiter\'s time.',
+      'Successfully completed my internship as an Electrical & Electronics Engineer',
+      'Worked with industry - scaled PLCs, Proprietary Programming Languages (especially with SIEMENS machines)',
+      'Collaborated with the IT Department',
+      'Had a chance to experience how big scaled systems work in an automotive factory'
     ],
   ),
-    // TODO(berkay): replace this placeholder with a real experience entry.
+
   ExperienceEntry(
-    role: 'Role title — TODO',
-    organization: 'Organization — TODO',
-    period: 'Dates — TODO',
+    role: 'Software Developer',
+    organization: 'DC Academy',
+    period: 'Nov 2021 - July 2022',
     bullets: [
-      'TODO(berkay): what you did and the impact it had.',
-      'TODO(berkay): a second highlight worth a recruiter\'s time.',
+      'Worked as a part of the mobile application team that developed a transportation application which includes crypto currencies using Dart and Flutter, while simultaneously working on Smart Contract Development, Website Development, Social Media Management, Project Planning and Team Management which improved both my technical and social skills in related areas',
+      'My main focus was building the application', 
+      'Took part in the planning phase of the app',
+      'Worked on smart contracts using Solidity',
+      'Designed and coded websites using WebFlow',
+      'Had the role of Social Media Manager of the crypto project BoxingBoyzs Turkey branch',
+      'Had the role of manager of the Crypto Trading team of DC Academy Turkey',
+      'All of these areas taught and improved me in many ways, such as teamwork, communication skills, being a leader,team management, planning of a mobile application and taking major responsibilities',
     ],
   ),
 ];
