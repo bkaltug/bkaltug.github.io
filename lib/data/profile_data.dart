@@ -29,6 +29,6 @@ const Profile profile = Profile(
   tagline: 'Embedded Systems • FPGA • Satellite Communications • AI • Flutter',
   location: 'İzmir, Türkiye',
   githubUrl: 'https://github.com/bkaltug',
-  linkedinUrl: 'www.linkedin.com/in/bkaltug',
+  linkedinUrl: 'https://www.linkedin.com/in/bkaltug',
   email: 'berkay.ustagul@gmail.com',
 );

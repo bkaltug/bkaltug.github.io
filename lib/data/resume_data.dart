@@ -46,7 +46,7 @@ class ExperienceEntry {
 
 const List<EducationEntry> education = [
     EducationEntry(
-    degree: 'High School Diploma',
+    degree: 'High School',
     school: 'Bornova Anadolu Lisesi (BAL)',
     location: 'Izmir, Türkiye',
     gpa: null,
