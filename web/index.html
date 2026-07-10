@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -18,21 +18,83 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Berkay Altuğ Ustagül — Electronics & Communications Engineer working across embedded systems, FPGA, satellite communications, AI, and Flutter.">
+  <meta name="theme-color" content="#06070C">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Berkay Altuğ Ustagül — Electronics & Communications Engineer">
+  <meta property="og:description" content="Embedded systems, FPGA, satellite communications, AI, and Flutter projects by Berkay Altuğ Ustagül.">
+  <meta property="og:type" content="website">
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="portfolio">
+  <meta name="apple-mobile-web-app-title" content="Berkay Altuğ Ustagül">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-  <!-- Favicon -->
+  <!-- Favicon — TODO(berkay): replace favicon.png with personal branding -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>portfolio</title>
+  <title>Berkay Altuğ Ustagül — Electronics & Communications Engineer</title>
   <link rel="manifest" href="manifest.json">
+
+  <style>
+    html, body { margin: 0; padding: 0; background: #06070C; }
+
+    /* Branded loading screen: shown until Flutter renders its first frame. */
+    #loading {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+      background: #06070C;
+      transition: opacity 0.4s ease;
+    }
+    #loading.done { opacity: 0; pointer-events: none; }
+    #loading .name {
+      color: #F2F4F8;
+      font-family: "Space Grotesk", "Segoe UI", system-ui, -apple-system, sans-serif;
+      font-size: clamp(18px, 4vw, 30px);
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-align: center;
+      padding: 0 24px;
+    }
+    #loading .bar {
+      width: min(240px, 56vw);
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #FF3B5C, #9A5CFF, #4D7CFE, #FF3B5C);
+      background-size: 300% 100%;
+      animation: loading-slide 1.4s linear infinite;
+    }
+    @keyframes loading-slide {
+      from { background-position: 0% 0; }
+      to { background-position: -300% 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      #loading .bar { animation: none; }
+    }
+  </style>
 </head>
 <body>
+  <div id="loading" aria-label="Loading">
+    <div class="name">BERKAY ALTUĞ USTAGÜL</div>
+    <div class="bar"></div>
+  </div>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      var loading = document.getElementById('loading');
+      if (!loading) return;
+      loading.classList.add('done');
+      setTimeout(function () { loading.remove(); }, 450);
+    });
+  </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
