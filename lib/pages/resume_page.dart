@@ -227,7 +227,7 @@ class _EducationContent extends StatelessWidget {
         const SizedBox(height: 6),
         Text('${entry.school} · ${entry.location}', style: AppType.body(size: 14)),
         const SizedBox(height: 4),
-        Text(entry.period, style: AppType.chip(size: 13)),
+        Text(entry.period ?? '', style: AppType.chip(size: 13)),
         if (gpa != null) ...[
           const SizedBox(height: 8),
           Text(gpa, style: AppType.body(size: 14)),

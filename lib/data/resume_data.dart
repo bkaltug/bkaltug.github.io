@@ -3,7 +3,9 @@ class EducationEntry {
   final String degree;
   final String school;
   final String location;
-  final String period;
+
+
+  final String? period;
 
   /// Optional, e.g. 'GPA 3.4 / 4.0'. Hidden while null.
   final String? gpa;
@@ -15,7 +17,7 @@ class EducationEntry {
     required this.degree,
     required this.school,
     required this.location,
-    required this.period,
+    this.period,
     this.gpa,
     this.projectLine,
   });
@@ -43,35 +45,35 @@ class ExperienceEntry {
 }
 
 const List<EducationEntry> education = [
+    EducationEntry(
+    degree: 'High School Diploma',
+    school: 'Bornova Anadolu Lisesi (BAL)',
+    location: 'Izmir, Türkiye',
+    gpa: null,
+  ),
   EducationEntry(
     degree: 'B.Sc. Electronics & Communications Engineering',
     school: 'Izmir Institute of Technology (IZTECH)',
     location: 'Izmir, Türkiye',
-    // TODO(berkay): fill in the real start/end years.
-    period: '20XX – 2026',
-    // TODO(berkay): add GPA if you want it shown, e.g. 'GPA 3.4 / 4.0'. Optional.
     gpa: null,
-    // TODO(berkay): one line about your senior/graduation project.
-    projectLine: 'Senior project: TODO — one line about the graduation project.',
+    projectLine: 'Senior project: TBD',
   ),
 ];
 
 const List<SkillGroup> skillGroups = [
-  // TODO(berkay): confirm or replace these seeded chips — unverified skills
-  // must not ship as fact.
   SkillGroup(
     label: 'Embedded & Hardware',
-    skills: ['C / Embedded C', 'STM32', 'PCB Design'],
+    skills: ['C / C++', 'Arduino', "Raspberry Pi", 'STM32', 'PCB Design'],
   ),
-  // TODO(berkay): confirm or replace these seeded chips.
+
   SkillGroup(
     label: 'Communications & Signal Processing',
-    skills: ['MATLAB', 'Digital Signal Processing', 'RF Fundamentals'],
+    skills: ['MATLAB', 'Quartus', 'Digital Signal Processing', 'Satellite Communications'],
   ),
-  // TODO(berkay): confirm or replace these seeded chips.
+
   SkillGroup(
     label: 'AI & Machine Learning',
-    skills: ['PyTorch', 'scikit-learn', 'Computer Vision'],
+    skills: ['PyTorch', 'scikit-learn', 'Computer Vision', 'Natural Language Processing', 'Deep Learning', 'Neural Networks', 'Data Analysis', 'Data Visualization', 'TensorFlow', 'Keras', 'OpenCV', 'Pandas', 'NumPy', 'Matplotlib'],
   ),
   SkillGroup(
     label: 'Software & Tools',
@@ -79,11 +81,22 @@ const List<SkillGroup> skillGroups = [
   ),
   SkillGroup(
     label: 'Languages',
-    skills: ['Turkish — Native', 'English — C1', 'Italian — B1'],
+    skills: ['Turkish - Native', 'English - C1', 'Italian - B1'],
   ),
 ];
 
 const List<ExperienceEntry> experience = [
+  // TODO(berkay): replace this placeholder with a real experience entry.
+  ExperienceEntry(
+    role: 'Mobile App Developer Intern',
+    organization: 'RoofStacks',
+    period: 'Aug 2023 - Sep 2023',
+    bullets: [
+      'Successfully completed my internship in RoofStacks as a Mobile Application Developer Intern',
+      'Mainly worked with Kotlin',
+      'Got into Android Development, Kotlin Coroutines, Android Jetpack Compose and had the time to apply and practice all of these technologies'
+    ],
+  ),
   // TODO(berkay): replace this placeholder with a real experience entry.
   ExperienceEntry(
     role: 'Role title — TODO',
@@ -94,7 +107,7 @@ const List<ExperienceEntry> experience = [
       'TODO(berkay): a second highlight worth a recruiter\'s time.',
     ],
   ),
-  // TODO(berkay): replace this placeholder with a real experience entry.
+    // TODO(berkay): replace this placeholder with a real experience entry.
   ExperienceEntry(
     role: 'Role title — TODO',
     organization: 'Organization — TODO',
