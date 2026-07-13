@@ -51,24 +51,6 @@ class ResumePage extends StatelessWidget {
                         ),
                         const SizedBox(height: 36),
                         Entrance(
-                          delayMs: 140,
-                          child: _Section(
-                            label: 'SKILLS',
-                            child: GlassPanel(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  for (var i = 0; i < skillGroups.length; i++) ...[
-                                    if (i > 0) const SizedBox(height: 22),
-                                    _SkillGroupView(group: skillGroups[i]),
-                                  ],
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(height: 36),
-                        Entrance(
                           delayMs: 210,
                           child: _Section(
                             label: 'EXPERIENCE',
@@ -82,6 +64,24 @@ class ResumePage extends StatelessWidget {
                                         entry: experience[i],
                                       ),
                                     ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 36),
+                        Entrance(
+                          delayMs: 140,
+                          child: _Section(
+                            label: 'SKILLS',
+                            child: GlassPanel(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  for (var i = 0; i < skillGroups.length; i++) ...[
+                                    if (i > 0) const SizedBox(height: 22),
+                                    _SkillGroupView(group: skillGroups[i]),
+                                  ],
                                 ],
                               ),
                             ),
@@ -120,7 +120,7 @@ class _Header extends StatelessWidget {
             Text('Education & Resume', style: AppType.display(size: 36)),
           ],
         ),
-        SizedBox(width: 250),
+        SizedBox(width: 300),
         FilledButton.icon(
           onPressed: () => openExternalUri(Uri.base.resolve('cv.pdf')),
           icon: const Icon(Icons.download, size: 18),

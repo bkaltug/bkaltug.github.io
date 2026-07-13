@@ -125,11 +125,10 @@ const List<Project> projects = [
   ),
   // TODO(berkay): replace this placeholder with a real software project.
   Project(
-    title: 'Software Project — TODO',
-    slug: 'software-project-2',
+    title: 'Foody',
+    slug: 'foody',
     description:
-        'TODO(berkay): one or two sentences on what this project does and why '
-        'it is interesting.',
+        'An app that recommends recipes based on ingredients that is uploaded via gallery or camera.',
     tech: ['TODO'],
     type: ProjectType.software,
   ),
